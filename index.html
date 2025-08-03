@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treat Me Cakes - Premium Bakery in Gurugram</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-birthday-cake"></i>
+                <span>Treat Me Cakes</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#order" class="nav-link">Order Now</a>
+                <a href="#feedback" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Treat Me Cakes</h1>
+            <p>Gurugram's Premier Bakery for Custom Cakes & Delicious Treats</p>
+            <p class="hero-subtitle">Freshly baked with love, delivered to your doorstep</p>
+            <button class="cta-button" onclick="scrollToSection('order')">
+                <i class="fas fa-shopping-cart"></i> Order Now
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="cake-placeholder">
+                <i class="fas fa-birthday-cake"></i>
+                <p>Beautiful Custom Cakes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Specialties</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Birthday Cakes</h3>
+                    <p>Custom birthday cakes with personalized decorations</p>
+                    <span class="price">Starting from ₹800</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wedding Cakes</h3>
+                    <p>Elegant multi-tier wedding cakes for your special day</p>
+                    <span class="price">Starting from ₹2500</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3>Cupcakes</h3>
+                    <p>Delicious cupcakes in various flavors and designs</p>
+                    <span class="price">₹80 per piece</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>Pastries</h3>
+                    <p>Fresh pastries and desserts baked daily</p>
+                    <span class="price">Starting from ₹150</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2>Place Your Order</h2>
+            <form id="order-form" class="order-form">
+                <!-- Product Selection -->
+                <div class="form-section">
+                    <h3><i class="fas fa-cake"></i> Select Your Product</h3>
+                    <div class="product-selection">
+                        <div class="radio-group">
+                            <input type="radio" id="birthday-cake" name="product" value="Birthday Cake" required>
+                            <label for="birthday-cake">Birthday Cake - Starting from ₹800</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="wedding-cake" name="product" value="Wedding Cake" required>
+                            <label for="wedding-cake">Wedding Cake - Starting from ₹2500</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="cupcakes" name="product" value="Cupcakes" required>
+                            <label for="cupcakes">Cupcakes - ₹80 per piece</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="pastries" name="product" value="Pastries" required>
+                            <label for="pastries">Pastries - Starting from ₹150</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customization -->
+                <div class="form-section">
+                    <h3><i class="fas fa-palette"></i> Customization</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="flavor">Flavor:</label>
+                            <select id="flavor" name="flavor" required>
+                                <option value="">Select Flavor</option>
+                                <option value="Vanilla">Vanilla</option>
+                                <option value="Chocolate">Chocolate</option>
+                                <option value="Strawberry">Strawberry</option>
+                                <option value="Red Velvet">Red Velvet</option>
+                                <option value="Butterscotch">Butterscotch</option>
+                                <option value="Black Forest">Black Forest</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg):</label>
+                            <select id="weight" name="weight" required>
+                                <option value="">Select Weight</option>
+                                <option value="0.5">0.5 kg</option>
+                                <option value="1">1 kg</option>
+                                <option value="1.5">1.5 kg</option>
+                                <option value="2">2 kg</option>
+                                <option value="3">3 kg</option>
+                                <option value="5">5 kg</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Custom Message (Optional):</label>
+                        <input type="text" id="message" name="message" placeholder="e.g., Happy Birthday John!">
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-date">Delivery Date:</label>
+                        <input type="date" id="delivery-date" name="deliveryDate" required>
+                    </div>
+                </div>
+
+                <!-- Customer Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Customer Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-name">Full Name:</label>
+                            <input type="text" id="customer-name" name="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <!-- Delivery Address -->
+                <div class="form-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Delivery Address (Gurugram Only)</h3>
+                    <div class="form-group">
+                        <label for="address">Street Address:</label>
+                        <textarea id="address" name="address" rows="3" required placeholder="House/Flat No., Street Name, Landmark"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sector">Sector/Area:</label>
+                            <select id="sector" name="sector" required>
+                                <option value="">Select Sector</option>
+                                <option value="Sector 14">Sector 14</option>
+                                <option value="Sector 15">Sector 15</option>
+                                <option value="Sector 16">Sector 16</option>
+                                <option value="Sector 17">Sector 17</option>
+                                <option value="Sector 18">Sector 18</option>
+                                <option value="DLF Phase 1">DLF Phase 1</option>
+                                <option value="DLF Phase 2">DLF Phase 2</option>
+                                <option value="DLF Phase 3">DLF Phase 3</option>
+                                <option value="DLF Phase 4">DLF Phase 4</option>
+                                <option value="Golf Course Road">Golf Course Road</option>
+                                <option value="MG Road">MG Road</option>
+                                <option value="Cyber City">Cyber City</option>
+                                <option value="Udyog Vihar">Udyog Vihar</option>
+                                <option value="Sohna Road">Sohna Road</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode:</label>
+                            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-shopping-cart"></i> Place Order
+                </button>
+            </form>
+
+            <!-- Order Summary Modal -->
+            <div id="order-summary-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Order Confirmation</h2>
+                    <div id="order-summary-content"></div>
+                    <div class="modal-actions">
+                        <button class="confirm-button" onclick="confirmOrder()">Confirm Order</button>
+                        <button class="edit-button" onclick="closeModal()">Edit Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback-section">
+        <div class="container">
+            <h2>Customer Reviews & Feedback</h2>
+            
+            <!-- Add Feedback Form -->
+            <div class="feedback-form-container">
+                <h3>Share Your Experience</h3>
+                <form id="feedback-form" class="feedback-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewer-name">Your Name:</label>
+                            <input type="text" id="reviewer-name" name="reviewerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating:</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">Select Rating</option>
+                                <option value="5">5 Stars - Excellent</option>
+                                <option value="4">4 Stars - Very Good</option>
+                                <option value="3">3 Stars - Good</option>
+                                <option value="2">2 Stars - Fair</option>
+                                <option value="1">1 Star - Poor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" rows="4" required placeholder="Tell us about your experience with Treat Me Cakes..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i> Submit Review
+                    </button>
+                </form>
+            </div>
+
+            <!-- Reviews Display -->
+            <div class="reviews-container">
+                <h3>What Our Customers Say</h3>
+                <div id="reviews-list" class="reviews-list">
+                    <!-- Reviews will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Gurugram, Haryana, India</p>
+                        <p>Serving all areas of Gurugram</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 9876543210</p>
+                        <p>+91 9876543211</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>orders@treatmecakes.com</p>
+                        <p>info@treatmecakes.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
+                        <p>Sunday: 10:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Treat Me Cakes</span>
+                </div>
+                <p>&copy; 2025 Treat Me Cakes. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> in Gurugram</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
